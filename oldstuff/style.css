@@ -1,0 +1,157 @@
+.primary-1 {
+	background-color: #0B1C40;
+}
+.primary-2 {
+	background-color: #131B2D;
+}
+.primary-3 {
+	background-color: #3C8FC9;
+}
+.primary-4 {
+	background-color: #254078;
+}
+.primary-5 {
+	background-color: #DCE4F7;
+}
+
+body, textarea, input {
+	font-family: Helvetica, Arial, sans-serif
+}
+
+html, body {
+	direction: rtl;
+	margin: 0;
+	position: relative;
+}
+
+div.send-husham {
+	width: 100%;
+	height: 40px;
+	text-align: center;
+	padding-top: 7px;
+	margin: auto;
+	min-width: 590px;
+	white-space: nowrap;
+	position: relative;
+	background-color: #B3D0E4;
+	border-top: 1px solid #ADC0CE;
+	border-bottom: 1px solid #9FB6C7;
+}
+
+footer {
+		width: 100%;
+	font-size: 10px;
+	padding: 5px 0;
+	margin-top: 10px;
+	text-align: center;
+		background-color: #B3D0E4;
+	border-top: 1px solid #ADC0CE;
+	border-bottom: 1px solid #9FB6C7;
+}
+
+div.send-husham input.husham-textbox {
+	height: 25px;
+	width: 50%;
+	min-width: 500px;
+	font-size: 20px;
+	resize: none;
+	padding: 4px 1em;
+	border-radius: 3em 1em;
+	border: 1px solid #fff;
+}
+
+div.send-husham input.husham-textbox:focus {
+	height: 50px;
+}
+
+div.send-husham a.husham-submit {
+	border-radius: 3em 1em;
+	padding: 4px 1em;
+	display: inline-block;
+	cursor: pointer;
+	vertical-align: top;
+	clear: both;
+	background-color: #f7f7f7;
+	border: 1px solid #cccccc;
+		color: #333;
+	text-decoration: none;
+	
+	height: 25px;
+}
+
+div.send-husham a.husham-submit:hover, div.send-husham input.husham-textbox:hover {
+	background-color: #DCE4F7;
+	border: 1px solid #3C8FC9;
+}
+
+.husham-box {
+	border-radius: 3em 1em;
+	border: 1px solid #f1f1f1;
+	background-color: #f1f1f1;
+	margin: 10px auto 0 auto;
+	padding: 20px;
+	width: 80%;
+	min-width: 500px;
+	font-size: 20px;
+	text-align: center;
+}
+
+.husham-box:hover {
+	background-color: #fafafa;
+	border-color: #ccc;
+}
+
+#clear {
+	clear: both;
+}
+
+header {
+	display: block;
+	background-image: url('images/logo-bg.png');
+	margin: 0;
+	height: 59px;
+}
+
+header h1 {
+	margin: 0;
+	text-indent: -99999px;
+	background-image: url('images/logo.png');
+	height: 59px;
+	width: 300px;
+}
+
+nav {
+	margin: 0;
+	background-color: #131B2D;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li {
+	margin: 0;
+	display: table-cell;
+	min-width: 150px;
+	height: 27px;
+	vertical-align: middle;
+	border-left: 1px solid #1E2533;
+	border-right: 1px solid #131824;
+}
+
+nav ul li.last {
+	border-left: 0;
+	width: 2px;
+}
+
+nav ul li a {
+	display: block;
+	color: #dfdfdf;
+	text-decoration: none;
+	text-align: center;
+}
+
+nav ul li a:hover {
+	background-color: #0B1C40;
+}

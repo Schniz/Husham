@@ -1,0 +1,31 @@
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+    <img class="navbar-user-icon"
+       {{#id}}
+       src="https://graph.facebook.com/{{id}}/picture/square"
+       {{/id}}
+       {{^id}}
+       src="img/blank-avatar.jpg"
+       {{/id}}
+    > </i>
+    <span class="navbar-user-name">
+    {{#id}}
+        {{name}}
+    {{/id}}
+    {{^id}}
+        לא מחובר
+    {{/id}}
+    </span>
+    <b class="caret"> </b>
+</a>
+<ul class="dropdown-menu">
+    {{#id}}
+        <li>
+            <a href="#" class="logout-link">התנתק</a>
+        </li>
+    {{/id}}
+    {{^id}}
+        <li>
+            <a href="#" class="fb-login-link">התחבר באמצעות פייסבוק</a>
+        </li>
+    {{/id}}
+</ul>

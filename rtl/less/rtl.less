@@ -1,0 +1,660 @@
+/* RTL.less
+ * 
+ * This external .less file converts default Bootstrap properties so they would work with RTL languages.
+ * The file is based on Bootstrap V. 1.4.0 and refers to it's various .less files in comments
+ *
+ * Version 0.1
+ * Written by Omer Ziv (@omerziv) & Mushon Zer-Aviv (@mushon)
+ * Making use of @l0uy's http://l0uy.com/rtler/
+ * Based on work by OKhayat
+ * 
+ * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* --- accordion.less ------------------------------------- */
+
+// UNCHANGED
+// --------
+
+
+/* --- alerts.less ------------------------------------- */
+
+// ALERT STYLES
+// ------------
+
+// Base alert styles
+.alert {
+  padding: 8px 14px 8px 35px;
+}
+
+// Adjust close link position
+.alert .close {
+  left: -21px;
+  left: auto;
+}
+
+
+/* --- breadcrumbs.less ------------------------------------- */
+
+// UNCHANGED
+// --------
+
+
+/* --- button-groups.less ------------------------------------- */
+
+// BUTTON GROUPS
+// -------------
+
+
+// Make the div behave like a button
+.btn-group {
+  // clears the floated buttons
+  .ie7-restore-right-whitespace();
+}
+
+// Space out series of button groups
+.btn-group + .btn-group {
+  margin-right: 5px;
+  margin-left: auto;
+}
+
+// Float them, remove border radius, then re-add to first and last elements
+.btn-group .btn {
+  float: right;
+  margin-right: -1px;
+  margin-left: auto;
+}
+
+// Set corners individual because sometimes a single button can be in a .btn-group and we need :first-child and :last-child to both match
+.btn-group .btn:first-child {
+  margin-right: 0;
+  -webkit-border-top-right-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  border-bottom-right-radius: 4px;
+  margin-left: auto;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  -moz-border-radius-topleft: 0;
+  -moz-border-radius-bottomleft: 0;
+}
+
+.btn-group .btn:last-child,
+.btn-group .dropdown-toggle {
+  -webkit-border-top-left-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+  border-top-left-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 0;
+}
+
+// Reset corners for large buttons
+.btn-group .btn.large:first-child {
+  margin-right: 0;
+  -webkit-border-top-right-radius: 6px;
+  -moz-border-radius-topright: 6px;
+  border-top-right-radius: 6px;
+  -webkit-border-bottom-right-radius: 6px;
+  -moz-border-radius-bottomright: 6px;
+  border-bottom-right-radius: 6px;
+  margin-left: auto;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  -moz-border-radius-topleft: 0;
+  -moz-border-radius-bottomleft: 0;
+}
+
+.btn-group .btn.large:last-child,
+.btn-group .large.dropdown-toggle {
+  -webkit-border-top-left-radius: 6px;
+  -moz-border-radius-topleft: 6px;
+  border-top-left-radius: 6px;
+  -webkit-border-bottom-left-radius: 6px;
+  -moz-border-radius-bottomleft: 6px;
+  border-bottom-left-radius: 6px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 0;
+}
+
+// Split button dropdowns
+// ----------------------
+
+// Give the line between buttons some depth
+.btn-group .dropdown-toggle {
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+// Reposition the caret
+.btn .caret {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+/* --- buttons.less ------------------------------------- */
+
+// BUTTON STYLES
+// -------------
+
+
+// Base styles
+// --------------------------------------------------
+
+// Core
+.btn {
+  .ie7-restore-right-whitespace();
+}
+
+/* --- carousel.less ------------------------------------- */
+
+.carousel {
+
+  .item {
+    .transition(.6s ease-in-out right);
+  }
+
+  .active {
+    right: 0;
+    left: auto;
+  }
+
+  .next {
+    right: 100%;
+    left: auto;
+  }
+  .prev {
+    right: -100%;
+    left: auto;
+  }
+  .next.right,
+  .prev.left {
+    right: 0; 
+    left: auto;
+  }
+}
+
+// Left/right controls for nav
+// ---------------------------
+
+.carousel-control {
+  right: 15px;
+  
+  // Reposition the left one
+  &.left {
+    right: auto;
+    left: 15px;
+  }
+}
+
+/* --- close.less ------------------------------------- */
+
+// CLOSE ICONS
+// -----------
+
+.close {
+  float: left;
+}
+
+
+/* --- code.less ------------------------------------- */
+
+// UNCHANGED
+// --------
+
+
+/* --- component-animation.less ------------------------------------- */
+
+// UNCHANGED
+// --------
+
+
+/* --- dropdowns.less ------------------------------------- */
+
+.dropdown .caret {
+  margin-right: 2px;
+  margin-left: auto;
+}
+
+// The dropdown menu (ul)
+.dropdown-menu {
+  right: 0;
+  float: right;
+  *border-left-width: 2px;
+  *border-right-width: auto;
+  right: auto;
+}
+
+
+/* --- forms.less ------------------------------------- */
+
+// CHECKBOXES & RADIOS
+// -------------------
+
+// Indent the labels to position radios/checkboxes as hanging
+.radio,
+.checkbox {
+  padding-right: 18px;
+  padding-left: 0;
+}
+
+.radio input[type="radio"],
+.checkbox input[type="checkbox"] {
+  float: right;
+  margin-right: -18px;
+  margin-left: auto;
+}
+
+.radio.inline + .radio.inline,
+.checkbox.inline + .checkbox.inline {
+  margin-right: 10px;
+  margin-left: auto;
+}
+
+// Grid style input sizes
+input[class*="span"],
+select[class*="span"],
+textarea[class*="span"],
+.uneditable-input {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.help-inline {
+  padding-right: 5px;
+  padding-left: 0;
+}
+
+.input-prepend,
+.input-append {
+  .uneditable-input {
+    border-right-color: #ccc;
+  }
+  .add-on {
+    float: right;
+    margin-left: -1px;
+    margin-right: auto;
+  }
+}
+
+.input-append {
+  input,
+  .uneditable-input {
+    float: right;
+  }
+  .uneditable-input {
+    border-right-color: #eee;
+    border-left-color: #ccc;    
+  }
+  .add-on {
+    margin-left: 0;
+    margin-right: -1px;
+  }
+  input:first-child {
+    // In IE7, having a hasLayout container (from clearfix's zoom:1) can make the first input
+    // inherit the sum of its ancestors' margins.
+    *margin-right: -160px;
+    *margin-left: auto;
+
+    &+.add-on {
+      *margin-right: -21px;
+      *margin-left: auto;
+    }
+  }
+}
+
+
+// SEARCH FORM
+// -----------
+
+.form-horizontal {
+  // Float the labels left
+  .control-label {
+    float: right;
+    text-align: left;
+  }
+  // Move over all input controls and content
+  .controls {
+    margin-left: auto;
+    margin-right: 160px;
+  }
+  // Move over buttons in .form-actions to align with .controls
+  .form-actions {
+    padding-right: 160px;
+    padding-left: auto;
+  }
+}
+
+
+/* --- labels.less ------------------------------------- */
+
+// UNCHANGED
+// --------
+
+
+/* --- layouts.less ------------------------------------- */
+
+// UNCHANGED
+// --------
+
+
+/* --- mixins.less ------------------------------------- */
+
+// GRID SYSTEM
+// --------------------------------------------------
+
+// Site container
+// -------------------------
+.container-fixed() {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// Le grid system
+// -------------------------
+#gridSystem {
+  // Setup the mixins to be used
+  .offset(@gridColumnWidth, @gridGutterWidth, @columns) {
+    margin-right: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1)) + (@gridGutterWidth * 2);
+    margin-left: auto;
+  }
+  .gridColumn(@gridGutterWidth) {
+    float: right;
+    margin-right: @gridGutterWidth;
+    margin-left: auto;
+  }
+  // Take these values and mixins, and make 'em do their thang
+  .generate(@gridColumns, @gridColumnWidth, @gridGutterWidth) {
+    // Row surrounds the columns
+    .row {
+      margin-right: @gridGutterWidth * -1;
+      margin-left: auto;
+      .clearfix();
+    }
+  }
+}
+
+// Fluid grid system
+// -------------------------
+#fluidGridSystem {
+  .gridColumn(@fluidGridGutterWidth) {
+    float: right;
+    margin-right: @fluidGridGutterWidth;
+    margin-left: auto;
+  }
+  // Take these values and mixins, and make 'em do their thang
+  .generate(@gridColumns, @fluidGridColumnWidth, @fluidGridGutterWidth) {
+    .row-fluid {
+      > [class*="span"]:first-child {
+        margin-right: 0;
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+// Make a Grid
+// -------------------------
+// Use .makeRow and .makeColumn to assign semantic layouts grid system behavior
+.makeRow() {
+  margin-right: @gridGutterWidth * -1;
+  margin-left: auto;
+}
+
+.makeColumn(@columns: 1) {
+  float: right;
+  margin-right: @gridGutterWidth;
+  margin-left: auto;
+}
+
+
+/* --- modals.less ------------------------------------- */
+
+// Base modal
+.modal {
+  right: 50%;
+  margin: -250px -280px 0 0;
+  right: auto;
+}
+
+// Footer (for actions)
+.modal-footer {
+  .border-radius(0 6px 6px 0);
+  .btn {
+    float: left;
+    margin-right: 5px;
+    margin-left: auto;
+  }
+}
+
+/* --- navbar.less ------------------------------------- */
+
+// REQUIRES MANUAL INVESTIGATE
+// ---------------------------- XXX XXX XXX XXX XXX XXX XXX XXX
+
+
+/* --- navs.less ------------------------------------- */
+
+// NAVIGATIONS
+// -----------
+
+
+
+// BASE CLASS
+// ----------
+
+.nav {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+// NAV LIST
+// --------
+
+.nav-list {
+  padding-right: 14px;
+  padding-left: 14px;
+}
+
+.nav-list > li > a,
+.nav-list .nav-header {
+  margin-right:  -15px;
+  margin-left: -15px;
+}
+
+.nav-list [class^="icon-"] {
+  margin-left: 2px;
+  margin-right: auto;
+}
+
+.nav-tabs > li,
+.nav-pills > li {
+  float: right;
+}
+
+.nav-tabs > li > a,
+.nav-pills > li > a {
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-left: 2px;
+  margin-right: auto;
+}
+
+.nav-stacked > li > a {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+
+/* --- pager.less ------------------------------------- */
+
+// PAGER
+// -----
+
+.pager {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.pager .next a {
+  float: left;
+}
+
+.pager .previous a {
+  float: right;
+}
+
+/* --- pagination.less ------------------------------------- */
+
+.pagination ul {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.pagination a {
+  float: right;
+  border-right-width: 0;
+}
+
+.pagination li:first-child a {
+  border-right-width: 1px;
+}
+
+.pagination-left {
+  text-align: left;
+}
+
+/* --- popovers.less ------------------------------------- */
+
+// UNCHANGED
+// --------
+
+
+/* --- progress-bars.less ------------------------------------- */
+
+// UNCHANGED
+// ---------
+
+
+/* --- reset.less ------------------------------------- */
+
+html, body { 
+	direction:rtl;
+}
+
+
+/* --- responsive.less ------------------------------------- */
+
+// SEPARATED TO responsive-rtl.less
+
+
+/* --- scaffolding.less ------------------------------------- */
+
+// UNCHANGED
+// ---------
+
+
+/* --- sprites.less ------------------------------------- */
+
+// UNCHANGED
+// ---------
+
+
+/* --- tables.less ------------------------------------- */
+
+// REQUIRES MANUAL INVESTIGATE
+// ---------------------------- XXX XXX XXX XXX XXX XXX XXX XXX
+
+/* --- thumbnails.less ------------------------------------- */
+
+// THUMBNAILS
+// ----------
+
+.thumbnails {
+  margin-right: -@gridGutterWidth;
+  margin-left: auto;
+}
+
+.thumbnails > li {
+  float: right;
+}
+
+// Images and captions
+.thumbnail > img {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+/* --- tooltip.less ------------------------------------- */
+
+// UNCHANGED
+// ---------
+
+
+/* --- type.less ------------------------------------- */
+
+// LISTS
+// -----
+
+// Unordered and Ordered lists
+ul, ol {
+  margin: 0 25px @baseLineHeight / 2 0;
+}
+ul.unstyled,
+ol.unstyled {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+// Description Lists
+dd {
+  margin-left: auto;
+  margin-right: @baseLineHeight / 2;
+}
+
+// Blockquotes
+blockquote {
+  padding: 0 15px 0 0;
+  margin: 0 0 @baseLineHeight;
+  border-right: 5px solid @grayLighter;
+  border-left: auto;
+
+  // Float right with text-align: right
+  &.pull-left {
+    float: left;
+    padding-right: 0;
+    padding-left: 15px;
+    border-right: 0;
+    border-left: 5px solid @grayLighter;
+    p,
+    small {
+      text-align: left;
+    }
+  }
+}
+
+/* --- utilities.less ------------------------------------- */
+
+// UNCHANGED
+// ---------
+
+
+/* --- variables.less ------------------------------------- */
+
+// UNCHANGED
+// ---------
+
+
+/* --- wells.less ------------------------------------- */
+
+// UNCHANGED
+// ---------

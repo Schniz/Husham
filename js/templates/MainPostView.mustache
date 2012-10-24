@@ -1,0 +1,21 @@
+<div class="sender-thumb">
+    <div class="sender-thumb">
+        <img src="https://graph.facebook.com/{{fb_id}}/picture/square" alt="{{author}}" />
+    </div>
+</div>
+<div class="husham-text">
+    <p>
+        {{text}}
+    </p>
+</div>
+<ul class="husham-tags">
+    {{#tags}}
+        <li><a href="posts/{{name}}">{{name}}</a></li>
+    {{/tags}}
+</ul>
+<div class="clearer"></div>
+<p class="husham-info form-inline">
+    נשלח על ידי <a href="#" class="sender">{{author}}</a> בתאריך <span class="send-date">{{post_date}}</span>
+    <a href="#" class="btn btn-mini btn-success like-post">{{likes}} <i class="icon-thumbs-up"></i></a>
+    <a href="#" class="btn btn-mini btn-danger dislike-post">{{dislikes}} <i class="icon-thumbs-down"></i></a>
+</p>
